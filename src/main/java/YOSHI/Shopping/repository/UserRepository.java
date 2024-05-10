@@ -1,15 +1,15 @@
 package YOSHI.Shopping.repository;
 
-import YOSHI.Shopping.domain.User;
+import YOSHI.Shopping.domain.User1;
 
 import java.util.Optional;
 
 public interface UserRepository {
 
-    User save(User user);
+    User1 save(User1 user);
 
-    Optional<User> findById(String id);
-    Optional<User> findByName(String name);
+    Optional<User1> findById(String id);
+    Optional<User1> findByName(String name);
 
 
 

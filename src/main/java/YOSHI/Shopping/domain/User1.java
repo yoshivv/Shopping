@@ -6,12 +6,20 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class User {
+public class User1 {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long num;
 
-    String name,id;
+    String name,id,password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public long getNum() {
         return num;

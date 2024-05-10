@@ -1,7 +1,7 @@
 package YOSHI.Shopping.repository;
 
 
-import YOSHI.Shopping.domain.User;
+import YOSHI.Shopping.domain.User1;
 import jakarta.persistence.EntityManager;
 
 import java.util.List;
@@ -16,7 +16,7 @@ public class JpaUserRepository implements UserRepository {
     }
 
     @Override
-    public User save(User user) {
+    public User1 save(User1 user) {
 
         em.persist(user);
 
@@ -24,8 +24,8 @@ public class JpaUserRepository implements UserRepository {
     }
 
     @Override
-    public Optional<User> findById(String id) {
-        List<User> result= em.createQuery("select m from User m where m.id= :id",User.class)
+    public Optional<User1> findById(String id) {
+        List<User1> result= em.createQuery("select m from User1 m where m.id= :id", User1.class)
                 .setParameter("id",id)
                 .getResultList();
 
@@ -33,8 +33,8 @@ public class JpaUserRepository implements UserRepository {
     }
 
     @Override
-    public Optional<User> findByName(String name) {
-        List<User> result= em.createQuery("select m from User m where m.name= :name",User.class)
+    public Optional<User1> findByName(String name) {
+        List<User1> result= em.createQuery("select m from User1 m where m.name= :name", User1.class)
                 .setParameter("name",name)
                 .getResultList();
 

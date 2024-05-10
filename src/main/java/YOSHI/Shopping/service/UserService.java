@@ -1,6 +1,6 @@
 package YOSHI.Shopping.service;
 
-import YOSHI.Shopping.domain.User;
+import YOSHI.Shopping.domain.User1;
 import YOSHI.Shopping.repository.UserRepository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,7 +15,7 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public Long join(User user){
+    public Long join(User1 user){
 
         userRepository.findById(user.getId()).
                 ifPresent(user1 -> {
